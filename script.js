@@ -7,6 +7,11 @@ form.addEventListener("submit", function(event) {
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
 
+    if (!email.includes("@")) {
+    alert("Email inválido!");
+    return;
+    }
+
     const li = document.createElement("li");
     li.textContent = `${nome} - ${email}`;
 
